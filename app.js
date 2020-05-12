@@ -131,32 +131,15 @@ function ready(geo, userData, hexSize) {
     .style('fill', d => d.colour)
     .style('stroke', '#F7E76E')
     .style('stroke-opacity', 0.5);
-/*
-  legend
-    .append('text')
-    .text(
-      (d, i, n) => (i == 0 || i == n.length - 1 ? formatNum(d.density) : '')
-    )
-    .attr('fill', '#555')
-    .attr('font-family', 'courier')
-    .attr('font-size', '0.7rem')
-    .attr('font-weight', 'bold')
-    .attr('text-anchor', 'middle')
-    .attr('dy', -10);
-    */
 }
 
 function prepareData(hexSize){ 
 
   //load map of USA
-  const geoData = d3.json(
-    'https://raw.githubusercontent.com/larsvers/map-store/master/us_mainland_geo.json'
-  );
+  const geoData = d3.json('https://raw.githubusercontent.com/larsvers/map-store/master/us_mainland_geo.json');
 
   //load map of UFO sightings 
-  const points = d3.json(
-  'ufousadata.json'
-  );
+  const points = d3.json('ufousadata.json');
 
   Promise.all([geoData, points]).then(res => {
     let [geoData, userData] = res;
