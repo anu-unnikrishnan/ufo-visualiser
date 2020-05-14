@@ -1,4 +1,4 @@
-GUIDE TO UFO VISUALISER.
+Guide to UFO Visualiser.
 ----------------------------
 
 This repository contains Javascript/HTML/CSS code for UFO Visualiser, a website which shows a hex map of UFO sightings in the USA from 1910 - 2014.
